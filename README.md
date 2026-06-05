@@ -88,6 +88,25 @@ The skill knows what to ask you and what to check. You just describe your situat
 
 ---
 
+## Is it safe to install?
+
+Short answer: yes — and here is exactly why, so you can judge for yourself.
+
+**A skill is a plain text file.** Installing this skill copies one file — `SKILL.md` — to a folder on your computer (`~/.cursor/skills/oss-contribution-guardian/`). That file contains instructions written in plain English (specifically Markdown, a simple text format). You can read it before installing it: [skill/SKILL.md](skill/SKILL.md).
+
+**It has no executable code.** Unlike installing software (`npm install`, `pip install`, downloading an app), a skill file runs nothing. There are no scripts, no dependencies, no network calls, nothing that executes on your machine. It is a text document that Cursor's AI reads to understand how to behave when you ask it questions.
+
+**It cannot access your files or system on its own.** The skill influences how the AI responds in chat — that's all. It cannot open files, make network requests, or do anything to your computer without you explicitly asking Cursor to do something and approving it.
+
+**What you should always do with any skill from anyone:**
+- Read the `SKILL.md` file before installing — it is short and written in plain English
+- Check that the instructions look reasonable and match what the skill claims to do
+- If anything looks suspicious (instructions to ignore your safety settings, instructions to run commands without telling you), don't install it
+
+This applies to this skill and any other skill you find online. The ability to read exactly what you're installing before you install it is one of the things that makes skills safer than traditional software.
+
+---
+
 ## Limitations
 
 **This skill reads documentation — it does not read code.** It cannot detect secrets in your diff, find vulnerable dependencies, or check license compliance in vendored code. For that, use dedicated tools like `git-secrets`, `trivy`, or `npm audit`.
