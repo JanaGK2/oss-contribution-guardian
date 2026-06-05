@@ -68,11 +68,23 @@ mkdir -p ~/.cursor/skills/oss-contribution-guardian
 cp skill/SKILL.md ~/.cursor/skills/oss-contribution-guardian/SKILL.md
 ```
 
-### Prompt templates and checklists
+### You don't need to open any files
 
-`skill/prompts.md` has ready-to-copy prompts for every common situation — reviewing a repo, checking a license, understanding sign-off requirements, preparing a first contribution, responding to maintainer feedback, and more. Each one explains in plain language when to use it.
+Once the skill is installed, just talk to Cursor naturally. You don't need to find, open, or read any other files. Examples of things you can just say:
 
-`skill/checklists.md` has step-by-step checklists for licenses, attribution, security, PR readiness, etiquette, and employer IP — with a plain-English explanation of why each item matters.
+> *"Give me a checklist before I contribute to this project."*
+
+> *"What does this license mean for my contribution?"*
+
+> *"Help me figure out what to write in my pull request description."*
+
+> *"I found a security issue — what should I do?"*
+
+The skill knows what to ask you and what to check. You just describe your situation.
+
+---
+
+**If you want to browse the reference material:** The [`skill/prompts.md`](skill/prompts.md) and [`skill/checklists.md`](skill/checklists.md) files are in this repo as standalone references — useful if you want to read through them separately or print a checklist. But you don't need them to use the skill inside Cursor.
 
 ---
 
