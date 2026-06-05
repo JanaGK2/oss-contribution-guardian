@@ -1,6 +1,6 @@
 # Example User Requests
 
-15 realistic requests a developer might give to Cursor with this skill installed.
+Realistic requests a developer might give to Cursor with this skill installed.
 
 ---
 
@@ -33,3 +33,9 @@
 14. "I want to open an issue to report a bug. What should I include based on this project's issue templates?" [paste issue template]
 
 15. "I've been contributing to this project for 6 months. The maintainer changed the license from MIT to AGPL. What does that mean for my previous contributions?"
+
+16. "A security prompt just appeared on my screen asking me to 'Allow' or 'Run' a command. What does that mean? Should I click it?"
+
+17. "Why does the email in my git commits matter? Does it have to match my GitHub account?"
+
+18. "What's the difference between my GitHub username and my git author name? Do they have to be the same?"

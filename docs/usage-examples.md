@@ -103,7 +103,89 @@ This is not legal advice. If the functions are closely related to proprietary co
 
 ---
 
-## Example 5: Maintainer left confusing feedback on a pull request
+## Example 5: A scary permission prompt appeared
+
+**User says:**
+> A box just appeared asking me to "Allow" or "Run" a command. I don't know what that means. Should I be worried?
+
+**Skill response:**
+
+Good instinct to pause rather than just click through. Here's what that prompt means.
+
+When an AI assistant (like Cursor) runs commands on your computer, it normally does so inside a "sandbox" — a restricted environment that limits what the command can do. This is a safety measure: it prevents the AI from accidentally (or intentionally) doing something harmful to your system.
+
+Occasionally a command needs to step outside that sandbox — for example, to write to a protected file, access the network in an unusual way, or interact with system settings. When that happens, your tool asks your permission first.
+
+**"Allow"** means: yes, let this specific command run with fewer restrictions, just this once.
+
+**"Run"** (when it appears separately) usually means: run with the current restrictions, which may cause the command to fail.
+
+**Should you click Allow?**
+
+Only if you understand what the command is about to do. Before clicking anything:
+- Read the command shown in the prompt — it will tell you exactly what's being run
+- If you don't understand what the command does, ask before clicking
+- If the command looks like it's doing something unrelated to what you asked for, don't allow it
+
+In most contribution workflows, permission prompts appear for things like:
+- Writing to your git configuration (`git config`) — safe, sets your name and email
+- Pushing to GitHub over SSH — safe, sends your committed files to GitHub
+- Installing tools (`pip install`, `npm install`) — safe if you know what's being installed
+
+**What you should never do:** click Allow on a prompt you don't understand just to make it go away. The prompt exists precisely so you can make an informed decision.
+
+---
+
+## Example 6: Git email and identity questions
+
+**User says:**
+> You're using my work email for the git commit. My GitHub account uses my personal email. Does it matter?
+
+**Skill response:**
+
+Yes, it matters — and you were right to catch it.
+
+Here's why: GitHub uses the email address in your git commits to link those commits to your GitHub profile. If you commit with your work email (`you@company.com`) but your GitHub account is registered with your personal email (`you@gmail.com`), GitHub won't recognize you as the author. Your commits won't show your avatar, won't count toward your contribution graph, and won't link back to your profile.
+
+**To find the right email to use:**
+Go to [github.com/settings/emails](https://github.com/settings/emails) — your primary verified email is listed there. That's the one to use in `git config user.email`.
+
+**To set it for this project:**
+```bash
+git config user.email "your-github-email@example.com"
+```
+
+To set it globally for all projects on your computer:
+```bash
+git config --global user.email "your-github-email@example.com"
+```
+
+---
+
+**User asks (follow-up):**
+> Is my GitHub username the same as my git author name? Do they have to match?
+
+**Skill response:**
+
+No — they're completely separate, and they don't have to match.
+
+| | What it is | Where it appears |
+|---|---|---|
+| **GitHub username** | Your account handle on GitHub.com | Profile URL, @mentions, repository URLs |
+| **Git author name** | A text label attached to your commits | Commit history (`git log`), contributor lists |
+
+Your GitHub username might be `JanaGK2`. Your git author name might be `Jana Gutierrez`. Both are fine — GitHub links commits to your profile via email, not by matching your name to your username.
+
+**Common choices for git author name:**
+- Your real name (`Jana Gutierrez`) — most common for public OSS work
+- A consistent display name (`Jana GK`) — also fine
+- Your GitHub username — works but unusual
+
+Pick something you're comfortable having permanently visible in the commit history of public projects. Whatever you choose, be consistent across your projects.
+
+---
+
+## Example 7: Maintainer left confusing feedback on a pull request
 
 **User says:**
 > I opened my first pull request and the maintainer left this comment: "LGTM but please rebase onto main and squash your commits before we merge." I have no idea what any of that means.
