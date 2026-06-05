@@ -23,7 +23,11 @@ The license is the legal document that says who can use the project and how. Wit
 - [ ] **If I'm bringing in code from another project, I've confirmed the licenses are compatible.**
   *Copying 10 lines from a GPL project into an MIT project creates a license conflict. If in doubt, write the code yourself or ask the maintainer.*
 
-> **No license found?** Ask the maintainer to add one before you contribute. You can say: *"I'd love to contribute — would you consider adding an open-source license? choosealicense.com makes it easy."* Without a license, the legal status of any contribution is genuinely unclear.
+> **No license found?** Ask the maintainer to add one before you contribute.
+> 
+> **How to ask:** Go to the repository on GitHub. Click the **Issues** tab (it's near the top of the page). Click **New Issue**. Write something like: *"I'd love to contribute — would you consider adding an open-source license? choosealicense.com makes it really easy to pick one."*
+> 
+> An "issue" on GitHub is just a message to the project maintainer — like sending them a note. It's visible to everyone, which is normal. Most maintainers will respond within a few days. Wait for a license to be added before contributing.
 
 ---
 
@@ -35,7 +39,7 @@ The license is the legal document that says who can use the project and how. Wit
   *Some projects have a `CONTRIBUTORS` or `AUTHORS` file. Others list contributors in the README. Many just use the git commit history. There's no single standard.*
 
 - [ ] **If I'm adapting code from another source, I've noted that in my pull request description.**
-  *Example: "The approach in this PR is based on the pattern from [link]." This isn't always required, but it's good practice.*
+  *A pull request is how you propose your change on GitHub — you're asking the project owner to "pull in" your changes. When you open one, there's a text box where you write what you changed and why. That's the "pull request description." If your change is based on something you found elsewhere, mention it there: "The approach here is based on the pattern from [link]." This isn't always required, but it's good practice and shows you're being transparent.*
 
 - [ ] **I have not removed existing copyright notices from any file I modified.**
   *If a file starts with `// Copyright 2024 Some Person`, leave it there even if you change every line of code below it.*
@@ -50,7 +54,16 @@ The license is the legal document that says who can use the project and how. Wit
 Before contributing, check that your change doesn't accidentally introduce a problem — and that you know what to do if you found a problem.
 
 - [ ] **My contribution does not contain passwords, API keys, tokens, or private credentials.**
-  *Run `git diff` and look through your changes before committing. It's easy to accidentally commit a `.env` file or a hardcoded key. Tools like `git-secrets` or `trufflehog` can help automate this check.*
+
+  A password or API key is a secret string that gives access to a service — like a password to a database, or a key that lets code talk to Google or OpenAI. Accidentally publishing one means anyone who reads your code could use it.
+
+  **If you're contributing via the GitHub browser (editing files on GitHub.com):**
+  Before you click "Commit changes", scroll through your edits and confirm you haven't accidentally included any secret strings, especially if you copied code from your own project.
+
+  **If you're working locally (on your computer):**
+  Before committing, review your changes by looking at the files you edited. Pay particular attention to any configuration files (especially files named `.env`, `config.json`, `settings.py`, or similar) — these often contain secrets and should almost never be committed to a public project.
+
+  A `.env` file is a common way developers store secrets locally. It should never be shared or committed. If a project has a `.gitignore` file (a list of files git should ignore), `.env` is usually listed there for this reason.
 
 - [ ] **If I found a security vulnerability while preparing this contribution, I will report it privately — not via a public GitHub issue.**
   *Public issues are visible to everyone, including attackers. Check `SECURITY.md` for the project's preferred reporting method. If there isn't one, contact the maintainer directly via GitHub.*
@@ -74,7 +87,7 @@ A "pull request" (PR) is how you propose your changes to the project. This check
   *Check `CONTRIBUTING.md` or the README for how to run tests. If there are no tests, note that in your PR.*
 
 - [ ] **If my change affects how users interact with the software, I have updated the documentation.**
-  *If you change what a function does, update the docstring. If you change a feature, update the README section that describes it.*
+  *If you changed how something works, update any written explanation of how it works. This might be the README, a docs folder, or a comment in the code explaining what a function does. If you're not sure what needs updating, mention it in your pull request description and ask.*
 
 - [ ] **I have reviewed my own diff before opening the PR.**
   *Read through your changes as if you're the maintainer seeing them for the first time. Is it clear what changed and why?*

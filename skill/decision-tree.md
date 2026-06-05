@@ -33,7 +33,7 @@ Does the repo have a LICENSE file?
           │     employer check needed unless your company has specific
           │     open-source policies."
           │
-          ├── Copyleft (GPL v2, GPL v3, AGPL, EUPL, LGPL)
+          ├── Copyleft (GPL v2, GPL v3, AGPL, LGPL, and others)
           │   → Requires more care. Tell the user:
           │     "This project uses [license name] — a copyleft license. This
           │     means your contribution will also be under the same copyleft
