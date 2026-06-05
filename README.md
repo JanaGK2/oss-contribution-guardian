@@ -39,32 +39,40 @@ It handles:
 
 ## Quick Start
 
-### Install the skill in Cursor
+### The easy way — just tell Cursor
+
+Open a Cursor chat and paste this:
+
+> *"Please install this skill: https://github.com/JanaGK2/oss-contribution-guardian"*
+
+Cursor will handle it. Once installed, you can use it immediately in the same chat or any new one.
+
+### Then try one of these prompts
+
+> *"I want to contribute to https://github.com/owner/repo — what do I need to know?"*
+
+> *"Walk me through contributing to an open-source project for the first time."*
+
+> *"Review this before I open a pull request."* [paste a CONTRIBUTING.md or LICENSE file]
+
+That's it. The skill will guide you from there.
+
+---
+
+### If you prefer to install manually (optional)
+
+If you're comfortable with a terminal, you can also copy the skill file directly:
 
 ```bash
 mkdir -p ~/.cursor/skills/oss-contribution-guardian
 cp skill/SKILL.md ~/.cursor/skills/oss-contribution-guardian/SKILL.md
 ```
 
-Then in any Cursor chat:
+### Prompt templates and checklists
 
-> *"I want to contribute to https://github.com/owner/repo — what do I need to know?"*
+`skill/prompts.md` has ready-to-copy prompts for every common situation — reviewing a repo, checking a license, understanding sign-off requirements, preparing a first contribution, responding to maintainer feedback, and more. Each one explains in plain language when to use it.
 
-or
-
-> *"Review this CONTRIBUTING.md before I open a PR."* [paste the file]
-
-or
-
-> *"Walk me through contributing to an open-source project for the first time."*
-
-### Use the prompt templates
-
-`skill/prompts.md` contains ready-to-use prompts for common situations — reviewing a repo, checking a license, understanding a CLA, preparing a first contribution, and responding to maintainer feedback.
-
-### Use the checklists
-
-`skill/checklists.md` has step-by-step checklists for: licenses, attribution, security, PR readiness, etiquette, and employer IP. Each item includes a plain-English explanation of why it matters.
+`skill/checklists.md` has step-by-step checklists for licenses, attribution, security, PR readiness, etiquette, and employer IP — with a plain-English explanation of why each item matters.
 
 ---
 
