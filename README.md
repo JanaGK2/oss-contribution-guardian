@@ -86,9 +86,17 @@ cp skill/SKILL.md ~/.cursor/skills/oss-contribution-guardian/SKILL.md
 
 ---
 
-## Who maintains this
+## Who maintains this, and how to improve it
 
-This project is community-maintained and welcomes contributions. See [CONTRIBUTING.md](CONTRIBUTING.md). If you find guidance that's wrong, outdated, or unclear — especially for beginners — please open an issue.
+This project is community-maintained. If the skill gave you confusing advice, missed something, or explained something badly — that's exactly the kind of feedback that makes it better.
+
+**The easiest way to contribute is to use the skill itself.** Once you've installed it, open a Cursor chat and say:
+
+> *"I want to contribute an improvement to https://github.com/JanaGK2/oss-contribution-guardian — walk me through it."*
+
+The skill will guide you through the whole process: figuring out what to suggest, whether to open an issue or a pull request, what to write, and how to do it step by step. You don't need to know how GitHub contributions work in advance — that's the point of the skill.
+
+If you'd rather start with something simpler, go to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what confused you or what was wrong. That's a valid contribution too — you don't have to fix it yourself.
 
 ---
 
