@@ -52,11 +52,13 @@ I'm about to propose my change to this project: [paste the URL or project name]
 
 Here's what my change does: [describe it in 1-2 sentences]
 
-Please help me check:
-1. Have I followed this project's contribution rules? (Check CONTRIBUTING.md if it exists)
-2. Is there a form or template I need to fill out when I open my pull request?
-3. What should I write in my pull request description?
-4. Am I missing anything obvious?
+Please:
+1. Read the project's CONTRIBUTING.md (if it exists) and tell me what it requires before I open a pull request
+2. Tell me if there's a form or template I need to fill out when I open my pull request
+3. Help me write my pull request description
+4. Tell me if I'm missing anything obvious
+
+Walk me through it — don't just give me a checklist to do alone.
 ```
 
 ---

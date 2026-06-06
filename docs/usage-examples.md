@@ -192,31 +192,40 @@ Pick something you're comfortable having permanently visible in the commit histo
 
 **Skill response:**
 
-Good news: this comment means the maintainer likes your change ("LGTM" = "Looks Good To Me"). They just want you to clean up the technical packaging before they accept it. Here's what each part means:
+Good news first: "LGTM" means "Looks Good To Me" — the maintainer likes your change. They just want you to tidy up the technical packaging before they accept it.
+
+This is one of the trickier things you'll be asked to do, and it's completely normal to be confused by it. Don't panic. The first thing to know: **did you make your changes in the GitHub browser, or on your own computer using git?**
+
+**If you edited files in the GitHub browser:**
+You can't do rebase and squash from the browser — these are git operations that need to happen on your computer. The easiest path is to ask here: *"I made my changes in the GitHub browser and the maintainer asked me to rebase and squash. Can you walk me through what to do?"* — and I'll guide you through the options, which may include asking the maintainer if they can do it for you (some maintainers will, especially for first contributors).
+
+**If you're working locally (on your computer with git):**
+
+Here's what each part means, then the commands:
 
 **"Rebase onto main"**
-Your copy of the project (your fork) might have drifted slightly from the main project — while you were working, the maintainer may have merged other changes. "Rebase onto main" means: update your copy to include those recent changes, and put your changes on top of them. It's like making sure your edit is applied to the latest version of the document, not a slightly older one.
+While you were working, the maintainer may have merged other people's changes into the project. "Rebase onto main" means: update your copy to include those recent changes, and put your changes on top of them. Like making sure your edit is applied to the latest version of a shared document, not a slightly older one.
 
-To do this in git:
+In git, `origin` is just the name for the GitHub copy of the project (as opposed to the copy on your computer). So `origin/main` means "the main branch on GitHub."
+
 ```bash
-git fetch origin
-git rebase origin/main
+git fetch origin          # Download any recent changes from GitHub
+git rebase origin/main    # Apply your changes on top of them
 ```
-If there are "conflicts" (your changes and someone else's changes touched the same lines), git will pause and ask you to sort them out manually.
+If there are "conflicts" (your changes and someone else's changes touched the same lines), git will pause and ask you to sort them out. If that happens, paste the error message here and I'll walk you through it.
 
 **"Squash your commits"**
-While working, you may have made multiple small commits — "fix typo," "oops, fix the fix," "actually working now." Squashing means combining all of those into one clean commit, so the project history stays tidy.
+While working, you may have made multiple small saves — "fix typo," "oops, fix the fix," "actually working now." Squashing combines all of those into one clean save, so the project history stays tidy.
 
-To do this:
 ```bash
 git rebase -i origin/main
 ```
-This opens a list of your commits. Change "pick" to "squash" (or just "s") on everything except the first commit. Save and close, then edit the combined commit message.
+This opens a list of your commits. Change the word "pick" to "squash" (or just "s") on everything except the first one. Save and close the file, then edit the combined commit message when prompted.
 
 **After doing both:**
 ```bash
 git push --force-with-lease origin your-branch-name
 ```
-(The `--force-with-lease` part is a safety measure — it makes sure you don't accidentally overwrite someone else's work.)
+The `--force-with-lease` part is a safety measure that prevents you from accidentally overwriting someone else's work. Replace `your-branch-name` with whatever branch you've been working on.
 
-This can feel fiddly the first time. If you get stuck, paste the error message here and I'll help you through it.
+If you get stuck at any point, paste the exact error message here and I'll help you through it step by step.
