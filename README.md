@@ -94,6 +94,10 @@ Once the skill is installed, just talk to Cursor naturally. You don't need to fi
 
 > *"I found a security issue — what should I do?"*
 
+> *"I built something and I'm wondering if I should publish it — help me think it through."*
+
+> *"Someone opened an issue on my project. Help me understand it and draft a response."*
+
 The skill knows what to ask you and what to check. You just describe your situation.
 
 ---

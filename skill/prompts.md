@@ -279,6 +279,49 @@ Then draft an opening paragraph from my answers. It should explain why this proj
 
 ---
 
+## "Help me share my project after publishing"
+
+**When to use:** You've just published a project publicly and want to tell people about it. This prompt helps you figure out where to share it and drafts posts for the right platforms.
+
+```
+I just published an open-source project and I'd like to share it with the right people.
+
+The project: [name and one-sentence description]
+My intended user: [describe the specific type of person who would use this]
+GitHub link: [paste the URL]
+
+Please:
+1. Suggest 2–3 platforms where my intended users are most likely to spend time
+2. Explain briefly why each one fits this project
+3. Draft a short post for each — something that tells the story of why I built it, not just a link
+
+For Reddit: suggest a specific subreddit, not just "Reddit."
+```
+
+---
+
+## "Someone opened an issue or pull request on my project"
+
+**When to use:** You've published a project and someone has interacted with it for the first time — filed a bug, asked a question, or proposed a change. You're not sure what to do next.
+
+An **issue** is a message someone sends to your project — a bug report, a feature request, or a question.
+A **pull request** is when someone has made a change to your code and is asking you to add it.
+
+```
+Someone just [opened an issue / opened a pull request] on my GitHub project [name].
+
+Here's what they wrote: [paste the issue or pull request description]
+
+Please:
+1. Help me understand what they're asking for or proposing
+2. Tell me what I should do next — do I need to fix something, ask them a question, or make a decision?
+3. Draft a response I can post back to them
+
+I want to be helpful and respectful. I'm new to this.
+```
+
+---
+
 ## "I found a security vulnerability" A security vulnerability is a bug that could let someone do something harmful — access data they shouldn't, crash a service, etc.
 
 **Important:** Do not post security issues as public GitHub issues. This prompt helps you figure out what to do instead.

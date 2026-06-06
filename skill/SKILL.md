@@ -263,16 +263,58 @@ A project that is hard to understand from the outside will not get used, even if
 
 Offer to generate each of these. Don't just describe what they should contain — write a draft.
 
+### Question 3b: Who is the intended user?
+
+Before writing anything, help the user name their intended user specifically. Not "developers" — a specific type of person with a specific context.
+
+Ask: "Who is the person you're imagining using this? What do they do? What tools do they already use? Are they comfortable with the command line?" 
+
+Once they have a clear picture, everything else follows: the vocabulary of the README, the level of the installation instructions, what needs to be explained and what doesn't.
+
+After the README is drafted, always run an audience check: *"My intended user is [their answer]. Read this README and tell me: would this person know how to get started? Is there anything that assumes knowledge they might not have?"*
+
 ### Question 4: Can they explain the why?
 
 The README opening is the hardest part. Most people write: "This is a tool that does X." That tells someone what it does but not why they should care.
 
 Help the user write an opener that answers: "Why does this exist? What problem was painful enough that you built something?" 
 
-Draft it from their answers to Question 1. A good opener sounds like:
+Write it from their answers, addressed directly to the intended user they named above. A good opener sounds like:
 > *"Every time I needed to [do the thing], I had to [describe the painful manual process]. This tool does it in [much faster/simpler way]."*
 
 If the user can't articulate this clearly even after prompting, that's valuable information — it means they should spend more time understanding their own project's value before publishing it.
+
+### Question 5: How do they tell people about it?
+
+After publishing, help the user figure out where to share. Match platform to audience:
+
+- **Reddit**: Specific subreddit where the intended user already is. The post needs a story, not just a link. Examples: r/Python, r/cursor, r/productivity, r/github.
+- **LinkedIn**: Good for professional tools. A personal story of "I built this because I was tired of [thing]" works well.
+- **dev.to** ([dev.to](https://dev.to)): Developer-focused writing platform, very welcoming to first posts.
+- **Hacker News**: "Show HN:" format — high visibility but direct, critical community. Needs a sharp one-liner.
+- **Product Hunt**: For tools with a visual interface.
+- **Discord/Slack communities**: Specific communities for the technology. High quality because it's exactly the target audience.
+- **Twitter/X**: `#buildinpublic` hashtag reaches a community of people who share what they're building.
+
+Ask: *"My project is [describe]. My intended user is [describe]. Which platforms would be the best fit and can you draft a post for the top two?"*
+
+Offer to draft the post. Don't just name the platform.
+
+### Question 6: Are they ready to be a maintainer?
+
+If the user is about to publish for the first time, briefly explain what happens after:
+
+**Stars** — someone bookmarked the project. No action needed.
+
+**Forks** — someone made their own copy. No action needed.
+
+**Issues** — someone filed a bug report, feature request, or question. Should acknowledge it, decide whether to act on it, and close it when resolved.
+
+**Pull requests** — someone proposed a code change. Acknowledge it, review it, then merge or decline with a kind explanation. Merging is one click. Declining is also OK.
+
+**If they lose time** — they can archive the repository (makes it read-only, sets the expectation clearly) or add an "unmaintained" note to the README. Both are responsible things to do.
+
+Keep this brief unless the user asks for more detail. The goal is to set expectations, not overwhelm.
 
 ---
 

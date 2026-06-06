@@ -20,13 +20,21 @@ Use this checklist when you're making something you built public for the first t
 - [ ] **I can describe what problem it solves.**
   *"Without this, I had to [manual painful process]" is a complete answer. If you can say this, you have a README opener.*
 
-- [ ] **I have an idea of who else would find this useful.**
-  *You don't need a large audience. One sentence is enough: "Anyone who uses Cursor and works with Google Sheets" is a valid answer.*
-
 - [ ] **I've checked whether something similar already exists.**
   *Ask Cursor: "Is there already an open-source tool that does [describe it]?" If yes, understand what makes yours different before you publish.*
 
-### Phase 2: Safety — is it safe to share?
+### Phase 2: Who is your intended user?
+
+- [ ] **I can name a specific type of person this is for — not just "developers."**
+  *Example: "People who use Cursor and work with Google Sheets for reporting." The more specific you are, the clearer your README will be.*
+
+- [ ] **I've thought about what they already know and what they'd need explained.**
+  *Are they comfortable with the command line? Do they know what a CSV is? What about git? Write your README for what they know, not what you know.*
+
+- [ ] **I've asked Cursor to check my README from their point of view.**
+  *"My intended user is [describe them]. Read my README and tell me: would this person know how to get started? Is anything unclear or missing?"*
+
+### Phase 3: Safety — is it safe to share?
 
 This is the most important phase. Once something is public on GitHub, it is very difficult to truly remove it from the internet.
 
@@ -45,9 +53,9 @@ This is the most important phase. Once something is public on GitHub, it is very
 - [ ] **A `.gitignore` file exists and covers sensitive files.**
   *`.gitignore` tells git which files to never commit — things like `.env` (where secrets live), local config files, and system files. Ask Cursor to generate one if it doesn't exist.*
 
-### Phase 3: Structure — does it have the right files?
+### Phase 4: Structure — does it have the right files?
 
-- [ ] **`README.md` exists and has a clear opener, installation instructions, and a usage example.**
+- [ ] **`README.md` exists and has a clear opener, installation instructions, and a usage example written for my intended user.**
 
 - [ ] **A `LICENSE` file exists.**
   *Without a license, the project is technically "all rights reserved" even if it's public. For most tools: MIT. Ask Cursor: "What license should I use and why?"*
@@ -58,13 +66,32 @@ This is the most important phase. Once something is public on GitHub, it is very
 - [ ] **`SECURITY.md` exists.**
   *One paragraph saying how to report security issues privately. Prevents people from posting vulnerabilities as public issues.*
 
-### Phase 4: The "why" — can you explain it?
+### Phase 5: The "why" — can you explain it?
 
 - [ ] **The README opening answers "why does this exist?" not just "what does it do?"**
   *"This is a tool that does X" tells someone what it does. "Every time I needed to X, I had to [painful process]" tells someone why they should care.*
 
-- [ ] **A new reader could understand the project in under two minutes.**
-  *Ask Cursor: "Read my README and tell me if anything is unclear for someone who has never seen this project before."*
+- [ ] **The README is written for my specific intended user, not for a generic reader.**
+  *The tone, vocabulary, and level of explanation should match the person from Phase 2.*
+
+### Phase 6: After publishing — did I tell people about it?
+
+- [ ] **I've identified where my intended users spend time online.**
+  *A subreddit, a Discord, LinkedIn, dev.to — somewhere the right people will actually see it.*
+
+- [ ] **I've shared the project with a short post explaining why it exists, not just a link.**
+  *Ask Cursor: "Help me draft a post for [platform] announcing my project."*
+
+### Phase 7: Maintenance — am I ready to be a maintainer?
+
+- [ ] **I understand what a star, an issue, a fork, and a pull request are.**
+  *See the guide at `docs/publishing-your-own-work.md` for plain-English explanations of each.*
+
+- [ ] **I've thought about how quickly I can respond to issues.**
+  *No rule requires you to be fast, but a short acknowledgment ("I saw this, will look into it soon") goes a long way.*
+
+- [ ] **My README says something about the project's current status.**
+  *Even "actively maintained" or "maintained occasionally" helps people know what to expect.*
 
 ---
 
