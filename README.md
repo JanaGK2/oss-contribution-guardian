@@ -88,6 +88,29 @@ You don't need to memorize commands or learn a workflow first. Just say what you
 
 The skill will ask you questions, check the relevant files, and guide you step by step. You don't need to know the terminology in advance — it will explain everything as you go.
 
+### Not sure what to try first? Start here.
+
+If you're new to open source and want somewhere low-stakes to practice, this project itself is a good first contribution.
+
+Why low-stakes? Because:
+- The maintainer (the author) is also learning. There's no senior gatekeeper waiting to judge your contribution.
+- The project is documentation — there's no risk of breaking production software.
+- Every improvement that makes the skill clearer for beginners directly serves the project's purpose.
+- Mistakes are easy to fix. GitHub keeps the full history — nothing is permanent or catastrophic.
+
+**Things you could contribute right now:**
+- Something that confused you — if a term wasn't explained or an explanation wasn't clear, that's a real gap
+- A topic that's missing — a situation you ran into that the skill didn't cover
+- A typo or unclear sentence — fix it and open a pull request; a one-line fix is a valid first PR
+- A new usage example — a conversation with the skill that went well (or didn't)
+- A platform missing from the sharing guide — a community where this content belongs
+
+You don't need to know how any of this works first. Once the skill is installed, say:
+
+> *"I want to make my first open-source contribution to https://github.com/JanaGK2/oss-contribution-guardian — walk me through it from the beginning."*
+
+Or go straight to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what you ran into. That's a contribution.
+
 ### If you prefer to install manually (optional)
 
 If you're comfortable with a terminal, you can copy the skill file directly:
@@ -141,32 +164,6 @@ This applies to this skill and any other skill you find online.
 **This is not legal advice.** For questions about employer IP agreements, license compatibility in commercial contexts, or CLA obligations, consult a qualified attorney. The skill will tell you when a question is in that territory.
 
 **It can only work with what's in the repo.** If a project has no `CONTRIBUTING.md`, the skill will tell you that — it won't invent what the maintainer probably wants.
-
----
-
-## Practice here first
-
-If you're new to open source and want to make your first contribution somewhere low-stakes, this project is a good place to start.
-
-Why low-stakes? Because:
-- The maintainer (the author) is also learning. There's no senior gatekeeper waiting to judge your PR.
-- The project is documentation — there's no risk of breaking production software.
-- Every contribution that makes the skill clearer for beginners directly serves the project's purpose.
-- Mistakes are easy to fix. GitHub keeps the full history — nothing is permanent or catastrophic.
-
-**Things you could contribute right now:**
-
-- **Something that confused you** — if a term wasn't explained, or an explanation wasn't clear, that's a real gap. Open an issue and describe what you didn't understand.
-- **A topic that's missing** — did you run into a situation that wasn't covered? Describe it in an issue.
-- **A typo or unclear sentence** — fix it directly and open a pull request. A one-line fix is a valid first PR.
-- **A new usage example** — if you had a conversation with the skill that went well (or didn't), adding it to `examples/` helps the next person.
-- **A platform missing from the sharing guide** — if you know a community where this type of content belongs that isn't mentioned, add it.
-
-**You don't need to know how any of this works before you start.** The skill will guide you through the whole process. Once you've installed it, open a Cursor chat and say:
-
-> *"I want to make my first open-source contribution to https://github.com/JanaGK2/oss-contribution-guardian — walk me through it from the beginning."*
-
-Or just go straight to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what you ran into. That's it — that's a contribution.
 
 ---
 
