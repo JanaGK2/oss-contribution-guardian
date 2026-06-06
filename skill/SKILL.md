@@ -1,10 +1,10 @@
 ---
 name: oss-contribution-guardian
 description: >-
-  Helps you contribute to open-source projects responsibly. Reviews the target
-  repository's own documentation and guides you step by step — from understanding
-  why you're contributing to knowing exactly what the project expects from you.
-  Explains every term. No prior GitHub experience assumed.
+  Helps you take two kinds of steps into open source: contributing to someone
+  else's project responsibly, or publishing your own work for the first time.
+  Reads the project's own documentation, guides you step by step, and explains
+  every term. No prior GitHub experience assumed.
 ---
 
 # OSS Contribution Guardian
@@ -222,7 +222,7 @@ Do not send follow-up messages asking for a faster review within the first two w
 
 Sometimes the user isn't contributing to someone else's project — they have something they built and want to know if it's worth sharing publicly. This is a different situation that needs a different approach.
 
-Work through these four questions in order. Do not jump ahead.
+Work through these questions in order. Do not jump ahead — each one shapes the next.
 
 ### Question 1: Is it worth sharing?
 
@@ -236,7 +236,17 @@ If the user struggles to answer the first two questions, the project may not be 
 
 If they answer clearly, help them draft a one-sentence description: *"This project helps [who] do [what] without [the painful alternative]."* That sentence becomes the first line of the README.
 
-### Question 2: Is it safe to share?
+### Question 2: Who is the intended user?
+
+Before writing anything, help the user name their intended user specifically. Not "developers" — a specific type of person with a specific context.
+
+Ask: "Who is the person you're imagining using this? What do they do? What tools do they already use? Are they comfortable with the command line?"
+
+Once they have a clear picture, everything else follows: the vocabulary of the README, the level of the installation instructions, what needs to be explained and what doesn't.
+
+After the README is drafted, always run an audience check: *"My intended user is [their answer]. Read this README and tell me: would this person know how to get started? Is there anything that assumes knowledge they might not have?"*
+
+### Question 3: Is it safe to share?
 
 Before a single file goes public, scan the project for things that must not be in a public repository. Tell the user:
 
@@ -251,7 +261,7 @@ Actively look for and flag:
 
 For each finding: explain what it is, why it's a problem, and suggest the fix. The usual fix for credentials is an environment variable. The usual fix for internal references is removing or replacing with generic placeholders.
 
-### Question 3: Does it have the right structure?
+### Question 4: Does it have the right structure?
 
 A project that is hard to understand from the outside will not get used, even if it's genuinely useful. Help the user create the minimum viable documentation:
 
@@ -263,17 +273,7 @@ A project that is hard to understand from the outside will not get used, even if
 
 Offer to generate each of these. Don't just describe what they should contain — write a draft.
 
-### Question 3b: Who is the intended user?
-
-Before writing anything, help the user name their intended user specifically. Not "developers" — a specific type of person with a specific context.
-
-Ask: "Who is the person you're imagining using this? What do they do? What tools do they already use? Are they comfortable with the command line?" 
-
-Once they have a clear picture, everything else follows: the vocabulary of the README, the level of the installation instructions, what needs to be explained and what doesn't.
-
-After the README is drafted, always run an audience check: *"My intended user is [their answer]. Read this README and tell me: would this person know how to get started? Is there anything that assumes knowledge they might not have?"*
-
-### Question 4: Can they explain the why?
+### Question 5: Can they explain the why?
 
 The README opening is the hardest part. Most people write: "This is a tool that does X." That tells someone what it does but not why they should care.
 
@@ -284,7 +284,7 @@ Write it from their answers, addressed directly to the intended user they named 
 
 If the user can't articulate this clearly even after prompting, that's valuable information — it means they should spend more time understanding their own project's value before publishing it.
 
-### Question 5: How do they tell people about it?
+### Question 6: How do they tell people about it?
 
 After publishing, help the user figure out where to share. Match platform to audience:
 
@@ -300,7 +300,7 @@ Ask: *"My project is [describe]. My intended user is [describe]. Which platforms
 
 Offer to draft the post. Don't just name the platform.
 
-### Question 6: Are they ready to be a maintainer?
+### Question 7: Are they ready to be a maintainer?
 
 If the user is about to publish for the first time, briefly explain what happens after:
 
@@ -318,7 +318,7 @@ Keep this brief unless the user asks for more detail. The goal is to set expecta
 
 ---
 
-
+## Firm Boundaries
 
 - **Do not provide legal advice.** When questions about license compatibility or employer IP arise, give the factual context and recommend they consult a lawyer or their company's legal team. Say explicitly: "This is not legal advice."
 - **Do not invent maintainer intent.** If the docs don't say it, say "not stated in the repo documentation."

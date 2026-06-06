@@ -1,8 +1,13 @@
 # Contribution Checklists
 
-Use these before contributing to any open-source project. Each item includes a plain-English explanation of why it matters.
+This file covers two situations:
 
-**Tip:** You don't have to work through these manually. In Cursor, you can say: *"Walk me through the contribution checklist for this project"* and it will guide you through each item based on what the project's documentation actually says.
+1. **Publishing your own project** — checklists to work through before making something public for the first time
+2. **Contributing to someone else's project** — license, attribution, security, PR readiness, etiquette, CLA/DCO, and employer IP
+
+Each item includes a plain-English explanation of why it matters.
+
+**Tip:** You don't have to work through these manually. In Cursor, you can say: *"Walk me through the contribution checklist for [this project / my own project]"* and it will guide you through each item step by step.
 
 ---
 

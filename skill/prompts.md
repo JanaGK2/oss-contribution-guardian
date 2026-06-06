@@ -282,10 +282,6 @@ Please:
 
 ---
 
-## "I think I found a security issue"
-
----
-
 ## "Should I publish my own project?"
 
 **When to use:** You've built something and you're wondering whether it's worth sharing publicly. Use this before you do any setup work — it helps you figure out if the project is ready, who it's for, and whether you can explain why it exists.
@@ -408,7 +404,9 @@ I want to be helpful and respectful. I'm new to this.
 
 ---
 
-## "I found a security vulnerability" A security vulnerability is a bug that could let someone do something harmful — access data they shouldn't, crash a service, etc.
+## "I found a security vulnerability"
+
+**When to use:** While looking at a project's code as part of your contribution, you noticed something that could be a security vulnerability — a bug that could let someone do something harmful, like access data they shouldn't or crash a service.
 
 **Important:** Do not post security issues as public GitHub issues. This prompt helps you figure out what to do instead.
 
