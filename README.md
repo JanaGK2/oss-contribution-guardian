@@ -1,49 +1,64 @@
 # OSS Contribution Guardian
 
-**A Cursor AI skill that helps you contribute to open-source projects — clearly, carefully, and respectfully.**
+**A Cursor AI skill for people who want to start contributing to open source — whether that means giving something back to a project you use, or sharing your own work with the world.**
 
-Most guides to open-source contribution assume you already know what a CLA is, why a missing LICENSE matters, or what DCO sign-off means. This one doesn't. It explains every step, in plain language, and checks the project's own documentation so you know exactly what's expected from you — not what's generically expected from everyone.
-
----
-
-## Why bother contributing?
-
-The tools you use every day — your code editor, frameworks, libraries — exist because people gave back. You don't have to be a senior engineer. You can fix a typo in documentation, report a bug clearly, or improve a confusing explanation. Those contributions are real and genuinely appreciated.
-
-This skill helps you do that without accidentally breaking norms, ignoring requirements, or creating work for a maintainer that doesn't help them.
+No prior experience required. Every term explained. Every step guided.
 
 ---
 
-## What it does
+## Open source is not a niche hobby
 
-When you point it at a GitHub repository, it:
+Before anything else: if you've ever thought "open source is for developers, not for me" — that framing is wrong, and it's worth correcting before we start.
 
-1. Reads the project's own rules (`CONTRIBUTING.md`, `LICENSE`, `SECURITY.md`, etc.)
-2. Explains what each file means in plain language
-3. Tells you what this specific project requires — not just general advice
-4. Flags anything missing or ambiguous
-5. Gives you a concrete checklist of what to do before you open a pull request
+Open source software is the shared foundation of modern technology. The operating system that powers most of the world's web servers (Linux) is open source. The platform that runs most cloud infrastructure at Google, Amazon, and Microsoft (Kubernetes) is open source. The JavaScript library behind many of the websites you use every day (React, built by Meta) is open source. The programming language used across data science, AI research, and automation worldwide (Python) is open source.
 
-It handles two situations:
+These aren't hobbyist side projects. They are the infrastructure that Fortune 500 companies depend on, that hospitals and governments run on, that banks and universities build with. Companies like Google, Microsoft, Red Hat, and IBM don't just *use* open source — they employ thousands of engineers whose primary job is contributing to it. It is, genuinely, how a large portion of the world's software gets built.
 
-**Contributing to someone else's project:**
-| Area | What gets checked |
+Open source works because people give back. When someone fixes a bug, improves documentation, or shares a tool they built — everyone benefits. That pool of shared knowledge grows. The [Open Source Initiative](https://opensource.org/about), which maintains the [Open Source Definition](https://opensource.org/osd), puts it directly: open source is about the freedom to use, study, modify, and distribute software for any purpose.
+
+You are allowed to be part of that. Even as a beginner. Even if you've never written a line of code in public. Even if your first contribution is fixing a typo.
+
+---
+
+## What this skill does
+
+This skill helps you take two kinds of steps into open source:
+
+**1. Contributing to someone else's project**
+You found a bug, spotted a documentation mistake, have an idea for an improvement, or just want to give back to a tool you use. This skill walks you through what you need to know before you propose your change: what the project allows, what it expects, what could go wrong if you skip a step, and how to communicate with the maintainers.
+
+**2. Publishing your own project**
+You built something — a script, a tool, a template, a skill file. You want to know if it's worth sharing, how to prepare it safely, and how to get it into a state where someone else could actually use it. This skill guides you through that whole process, including what happens after you publish.
+
+In both cases: the skill explains every term it uses. It does not assume you already know what a pull request, a license, a fork, or a commit is.
+
+---
+
+## What it covers
+
+### When contributing to someone else's project
+
+| What gets checked | Why it matters |
 |---|---|
-| **License** | Does it exist? What type? What does it mean for your contribution? |
-| **Contribution rules** | What does the project explicitly require? |
-| **Security** | Is there a safe way to report vulnerabilities? |
-| **Sign-off requirements** | Does this project need a CLA or DCO? (Plain-English explanation included.) |
-| **Attribution** | How does this project credit contributors? |
-| **PR readiness** | Are you actually ready to open a pull request? |
-| **Etiquette** | First-contribution expectations, communicating with maintainers |
+| **Does the project have a license?** | Without one, the legal status of your contribution is genuinely unclear. The skill explains what to do if there isn't one. |
+| **What does the license allow?** | Different licenses have different rules. Some require that your contribution stays open source. The skill explains this in plain language. |
+| **What does this project specifically require?** | Many projects have a `CONTRIBUTING.md` file with their own rules. The skill reads it and tells you what it says. |
+| **Does the project need a sign-off?** | Some projects require a CLA (Contributor License Agreement) or DCO (Developer Certificate of Origin). The skill explains what these are and how to handle them. |
+| **How do you report a security issue safely?** | Posting a vulnerability as a public issue can cause harm. The skill tells you the right way. |
+| **Are you ready to open a pull request?** | A checklist based on what *this specific project* requires, not generic advice. |
+| **How do you talk to the maintainer?** | Tone, expectations, and what to do if you don't hear back. |
 
-**Publishing your own project:**
-| Area | What it does |
+### When publishing your own project
+
+| What the skill does | Why it matters |
 |---|---|
-| **Value check** | Helps you articulate what the project does and who it's for |
-| **Safety scan** | Checks for credentials, internal references, hardcoded paths, and sensitive comments |
-| **Structure** | Generates README, LICENSE, .gitignore, CONTRIBUTING.md, SECURITY.md |
-| **The "why"** | Asks questions and drafts the README opener that explains why the project exists |
+| **Helps you decide if it's worth sharing** | Asks the right questions so you can articulate the value before you do any setup work. |
+| **Identifies your intended user** | Helps you write documentation for the person who will actually use it, not a generic reader. |
+| **Scans for things that shouldn't go public** | Credentials, internal company references, hardcoded paths, sensitive comments. Once something is on GitHub, it's very hard to fully remove. |
+| **Generates the standard files** | README, LICENSE, .gitignore, CONTRIBUTING.md, SECURITY.md — drafted for you. |
+| **Walks you through pushing to GitHub** | What `git add`, `git commit`, and `git push` mean, in plain English. |
+| **Suggests where to share after publishing** | Matches your project to the platforms where your intended users actually spend time. |
+| **Explains what being a maintainer means** | Stars, issues, pull requests, forks — what each one is and what (if anything) you need to do. |
 
 ---
 
@@ -57,52 +72,46 @@ Open a Cursor chat and paste this:
 
 Cursor will handle it. Once installed, you can use it immediately in the same chat or any new one.
 
-### Then try one of these prompts
+### Then describe your situation
+
+You don't need to memorize commands or learn a workflow first. Just say what you're trying to do:
 
 > *"I want to contribute to https://github.com/owner/repo — what do I need to know?"*
 
 > *"Walk me through contributing to an open-source project for the first time."*
 
-> *"Review this before I open a pull request."* [paste a CONTRIBUTING.md or LICENSE file]
-
-> *"I built something and I'm wondering whether to publish it publicly — help me think it through."*
+> *"I built something and I'm wondering whether to publish it — help me think it through."*
 
 > *"Scan my project for anything that shouldn't go in a public repository."*
 
-That's it. The skill will guide you from there.
+> *"Someone opened an issue on my project. Help me understand it and draft a response."*
 
----
+The skill will ask you questions, check the relevant files, and guide you step by step. You don't need to know the terminology in advance — it will explain everything as you go.
 
 ### If you prefer to install manually (optional)
 
-If you're comfortable with a terminal, you can also copy the skill file directly:
+If you're comfortable with a terminal, you can copy the skill file directly:
 
 ```bash
 mkdir -p ~/.cursor/skills/oss-contribution-guardian
 cp skill/SKILL.md ~/.cursor/skills/oss-contribution-guardian/SKILL.md
 ```
 
-### You don't need to open any files
-
-Once the skill is installed, just talk to Cursor naturally. You don't need to find, open, or read any other files. Examples of things you can just say:
-
-> *"Give me a checklist before I contribute to this project."*
-
-> *"What does this license mean for my contribution?"*
-
-> *"Help me figure out what to write in my pull request description."*
-
-> *"I found a security issue — what should I do?"*
-
-> *"I built something and I'm wondering if I should publish it — help me think it through."*
-
-> *"Someone opened an issue on my project. Help me understand it and draft a response."*
-
-The skill knows what to ask you and what to check. You just describe your situation.
-
 ---
 
-**If you want to browse the reference material:** The [`skill/prompts.md`](skill/prompts.md) and [`skill/checklists.md`](skill/checklists.md) files are in this repo as standalone references — useful if you want to read through them separately or print a checklist. But you don't need them to use the skill inside Cursor.
+## Who this is for
+
+**Primarily: people who are new to open source.**
+
+This skill was built by someone who is new to this space herself. Not a senior engineer with years of GitHub history. Someone who found the existing documentation confusing, jargon-heavy, and written for people who already knew what they were doing. Every explanation in this skill was written with that experience in mind.
+
+If you're in that position — you use open-source tools, you've built things you want to share, but the standard GitHub documentation makes you feel like you're missing something obvious — this was built for you.
+
+**Also: experienced open-source contributors who want to improve it.**
+
+This skill is itself an open-source project, and it needs people who know this space well to make it better. If you've been contributing to open source for years and you see something that's wrong, incomplete, or could be explained more clearly — please improve it. The guidance on how to do that is directly below.
+
+The author being new to this space is not a limitation — it's the point. The perspective of someone learning the process from scratch is exactly what was needed to write documentation that doesn't assume prior knowledge.
 
 ---
 
@@ -121,23 +130,23 @@ Short answer: yes — and here is exactly why, so you can judge for yourself.
 - Check that the instructions look reasonable and match what the skill claims to do
 - If anything looks suspicious (instructions to ignore your safety settings, instructions to run commands without telling you), don't install it
 
-This applies to this skill and any other skill you find online. The ability to read exactly what you're installing before you install it is one of the things that makes skills safer than traditional software.
+This applies to this skill and any other skill you find online.
 
 ---
 
 ## Limitations
 
-**This skill reads documentation — it does not read code.** It cannot detect secrets in your diff, find vulnerable dependencies, or check license compliance in vendored code. For that, use dedicated tools like `git-secrets`, `trivy`, or `npm audit`.
+**This skill reads documentation — it does not read code.** It cannot detect secrets in your files, find vulnerable dependencies, or check license compliance in vendored code. For automated secret scanning, use dedicated tools like `git-secrets` or `trufflehog`. For dependency vulnerabilities, use `trivy` or `npm audit`.
 
 **This is not legal advice.** For questions about employer IP agreements, license compatibility in commercial contexts, or CLA obligations, consult a qualified attorney. The skill will tell you when a question is in that territory.
 
-**It can only work with what's in the repo.** If a project has no `CONTRIBUTING.md`, the skill will tell you that — it won't guess what the maintainer probably wants.
+**It can only work with what's in the repo.** If a project has no `CONTRIBUTING.md`, the skill will tell you that — it won't invent what the maintainer probably wants.
 
 ---
 
-## Who maintains this, and how to improve it
+## How to improve this skill
 
-This project is community-maintained. If the skill gave you confusing advice, missed something, or explained something badly — that's exactly the kind of feedback that makes it better.
+If the skill gave you confusing advice, missed something, or explained something badly — that's exactly the kind of feedback that makes it better.
 
 **The easiest way to contribute is to use the skill itself.** Once you've installed it, open a Cursor chat and say:
 
@@ -145,13 +154,14 @@ This project is community-maintained. If the skill gave you confusing advice, mi
 
 The skill will guide you through the whole process: figuring out what to suggest, whether to open an issue or a pull request, what to write, and how to do it step by step. You don't need to know how GitHub contributions work in advance — that's the point of the skill.
 
-If you'd rather start with something simpler, go to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what confused you or what was wrong. That's a valid contribution too — you don't have to fix it yourself.
+If you'd rather start with something simpler: go to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what was confusing or wrong. That's a valid contribution — you don't have to fix it yourself.
 
 ---
 
-## Sources
+## Sources and further reading
 
 This skill is grounded in:
+- [Open Source Definition](https://opensource.org/osd) — Open Source Initiative
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/) — GitHub's Open Source Guides
 - [The Legal Side of Open Source](https://opensource.guide/legal/) — Open Source Guides
 - [New to open source? Here's everything you need to get started](https://github.blog/open-source/new-to-open-source-heres-everything-you-need-to-get-started/) — GitHub Blog
