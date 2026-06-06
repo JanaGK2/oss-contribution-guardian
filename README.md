@@ -16,7 +16,7 @@ These aren't hobbyist side projects. They are the infrastructure that Fortune 50
 
 Open source works because people give back. When someone fixes a bug, improves documentation, or shares a tool they built — everyone benefits. That pool of shared knowledge grows. The [Open Source Initiative](https://opensource.org/about), which maintains the [Open Source Definition](https://opensource.org/osd), puts it directly: open source is about the freedom to use, study, modify, and distribute software for any purpose.
 
-You are allowed to be part of that. Even as a beginner. Even if you've never written a line of code in public. Even if your first contribution is fixing a typo.
+You can be part of that. Even as a beginner. Even if you've never written a line of code in public. Even if your first contribution is fixing a typo.
 
 ---
 
