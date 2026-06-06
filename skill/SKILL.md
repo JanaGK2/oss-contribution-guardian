@@ -26,6 +26,8 @@ Use this skill when the user:
 - Wants help reviewing a specific file like `CONTRIBUTING.md` or `LICENSE`
 - Found a bug they want to report or fix
 - Is wondering if their change is appropriate to propose
+- Has built something themselves and wants to know if it's worth publishing publicly
+- Asks "should I put this on GitHub?" or "is my project ready to share?"
 
 ---
 
@@ -216,7 +218,65 @@ Do not send follow-up messages asking for a faster review within the first two w
 
 ---
 
-## Firm Boundaries
+## When the User Has Their Own Project to Publish
+
+Sometimes the user isn't contributing to someone else's project — they have something they built and want to know if it's worth sharing publicly. This is a different situation that needs a different approach.
+
+Work through these four questions in order. Do not jump ahead.
+
+### Question 1: Is it worth sharing?
+
+Help the user think this through before they do any work. Ask:
+- "What problem does this solve? Describe it in one sentence."
+- "What would you have to do without this tool?"
+- "Who else do you think encounters this same problem?"
+- "Is there already something on GitHub that does this?" (Offer to search or check)
+
+If the user struggles to answer the first two questions, the project may not be ready to share yet — not because it's bad, but because they haven't yet articulated what it's for. A project without a clear "why" is hard for anyone else to understand or use.
+
+If they answer clearly, help them draft a one-sentence description: *"This project helps [who] do [what] without [the painful alternative]."* That sentence becomes the first line of the README.
+
+### Question 2: Is it safe to share?
+
+Before a single file goes public, scan the project for things that must not be in a public repository. Tell the user:
+
+> *"Before we publish anything, I'm going to scan for things that shouldn't be public. Point me at the project folder or paste the key files."*
+
+Actively look for and flag:
+- **Credentials** — API keys, passwords, tokens, private keys. Look for patterns like `sk-`, `AIza`, `Bearer`, `password =`, `api_key =`, long random strings assigned to variables.
+- **Internal company references** — internal domain names, internal tool names (Jira project codes, internal Confluence/wiki URLs, VPN addresses, internal hostnames).
+- **Hardcoded personal paths** — `/Users/yourname/`, `C:\Users\yourname\`, paths that only work on one machine.
+- **TODO/FIXME comments with internal context** — comments like `# TODO: ask Maria about this` or `# FIXME: works around our Salesforce bug`.
+- **Company-specific logic** — business rules, customer names, internal product codes that have no meaning outside the organization.
+
+For each finding: explain what it is, why it's a problem, and suggest the fix. The usual fix for credentials is an environment variable. The usual fix for internal references is removing or replacing with generic placeholders.
+
+### Question 3: Does it have the right structure?
+
+A project that is hard to understand from the outside will not get used, even if it's genuinely useful. Help the user create the minimum viable documentation:
+
+- **README.md** — what it does, why it exists, how to install and use it, example output. Cursor can draft this.
+- **LICENSE** — help them pick one. For most tools: MIT. Ask: "Do you want others to be able to use this in commercial projects?" Yes → MIT. "Do you want any derivative work to stay open source?" → GPL.
+- **.gitignore** — generate one appropriate to the project's language/type. This prevents credentials and local config from being committed accidentally.
+- **CONTRIBUTING.md** — even two sentences is enough.
+- **SECURITY.md** — one paragraph on how to report security issues.
+
+Offer to generate each of these. Don't just describe what they should contain — write a draft.
+
+### Question 4: Can they explain the why?
+
+The README opening is the hardest part. Most people write: "This is a tool that does X." That tells someone what it does but not why they should care.
+
+Help the user write an opener that answers: "Why does this exist? What problem was painful enough that you built something?" 
+
+Draft it from their answers to Question 1. A good opener sounds like:
+> *"Every time I needed to [do the thing], I had to [describe the painful manual process]. This tool does it in [much faster/simpler way]."*
+
+If the user can't articulate this clearly even after prompting, that's valuable information — it means they should spend more time understanding their own project's value before publishing it.
+
+---
+
+
 
 - **Do not provide legal advice.** When questions about license compatibility or employer IP arise, give the factual context and recommend they consult a lawyer or their company's legal team. Say explicitly: "This is not legal advice."
 - **Do not invent maintainer intent.** If the docs don't say it, say "not stated in the repo documentation."

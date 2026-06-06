@@ -198,7 +198,88 @@ Please:
 
 ## "I think I found a security issue"
 
-**When to use:** While looking at the project's code as part of your contribution, you noticed something that looks like it could be a security vulnerability. A security vulnerability is a bug that could let someone do something harmful — access data they shouldn't, crash a service, etc.
+---
+
+## "Should I publish my own project?"
+
+**When to use:** You've built something and you're wondering whether it's worth sharing publicly. Use this before you do any setup work — it helps you figure out if the project is ready, who it's for, and whether you can explain why it exists.
+
+```
+I built something and I'm wondering whether to publish it publicly.
+
+Here's what it does: [describe it in a few sentences]
+
+Please:
+1. Ask me questions to help figure out if this is worth sharing — who it's for, what problem it solves, whether something like it already exists
+2. Based on my answers, give me an honest assessment: is this ready to share, does it need more work, or is the value unclear?
+3. If it looks worth sharing, help me write a one-sentence description that explains it to someone who's never heard of it before
+
+Don't just tell me yes or no — help me think it through.
+```
+
+---
+
+## "Scan my project before I publish it"
+
+**When to use:** You've decided to publish a project and want to make sure nothing sensitive or private goes out. This is the most important check before you make anything public.
+
+**What "sensitive" means:** credentials (passwords, API keys), internal company references, hardcoded paths that only work on your machine, or comments that reveal internal context.
+
+```
+I'm about to publish this project publicly and I need you to scan it for anything that shouldn't be in a public repository.
+
+[Paste your files, or describe the folder path]
+
+Please look for:
+1. Credentials or secrets — API keys, passwords, tokens, anything that looks like a long random string assigned to a variable
+2. Internal company references — internal URLs, domain names, tool names, project codes that only make sense inside an organization
+3. Hardcoded personal or machine-specific paths
+4. TODO or FIXME comments that mention internal context, people's names, or company-specific systems
+5. Anything else that looks like it should stay private
+
+For each thing you find: tell me exactly where it is, why it's a problem, and what to do about it.
+```
+
+---
+
+## "Help me create the standard files for my open-source project"
+
+**When to use:** You've confirmed the project is worth sharing and you've cleaned it up. Now you need the standard files that every public project should have.
+
+```
+I'm publishing my project publicly. It's called [name] and it does [describe it].
+
+Please help me create the following files. Draft each one from scratch — don't just describe what it should contain, write it:
+
+1. README.md — what it does, why it exists, how to install and use it, a simple example
+2. LICENSE — suggest which license makes sense for this project and why, then draft it
+3. .gitignore — appropriate for [the type of project / language]
+4. CONTRIBUTING.md — even a short one is fine
+5. SECURITY.md — one paragraph on how to report security issues
+
+For the README opener specifically: ask me questions about why I built this and what problem it solves before you write it, so it reflects what's actually true.
+```
+
+---
+
+## "Help me write the README opening"
+
+**When to use:** You have most of the README written but you're stuck on the first paragraph — the part that explains why the project exists and who should care.
+
+```
+I need help writing the opening paragraph for my README for a project called [name].
+
+Please ask me:
+1. What problem was I trying to solve when I built this?
+2. What did I have to do before I had this tool?
+3. Who else is likely to encounter this same problem?
+
+Then draft an opening paragraph from my answers. It should explain why this project exists, not just what it does. Keep it short — two to four sentences.
+```
+
+---
+
+## "I found a security vulnerability" A security vulnerability is a bug that could let someone do something harmful — access data they shouldn't, crash a service, etc.
 
 **Important:** Do not post security issues as public GitHub issues. This prompt helps you figure out what to do instead.
 

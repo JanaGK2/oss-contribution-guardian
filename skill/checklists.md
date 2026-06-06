@@ -6,6 +6,68 @@ Use these before contributing to any open-source project. Each item includes a p
 
 ---
 
+## Before You Publish Your Own Project
+
+Use this checklist when you're making something you built public for the first time. Work through it in order — each phase depends on the previous one being done.
+
+**In Cursor, say:** *"Help me work through the 'before you publish' checklist for my project."*
+
+### Phase 1: Value — is it worth sharing?
+
+- [ ] **I can describe what the project does in one sentence.**
+  *If you can't, the project may not be ready to share yet — not because it's bad, but because the purpose isn't clear enough for someone else to understand.*
+
+- [ ] **I can describe what problem it solves.**
+  *"Without this, I had to [manual painful process]" is a complete answer. If you can say this, you have a README opener.*
+
+- [ ] **I have an idea of who else would find this useful.**
+  *You don't need a large audience. One sentence is enough: "Anyone who uses Cursor and works with Google Sheets" is a valid answer.*
+
+- [ ] **I've checked whether something similar already exists.**
+  *Ask Cursor: "Is there already an open-source tool that does [describe it]?" If yes, understand what makes yours different before you publish.*
+
+### Phase 2: Safety — is it safe to share?
+
+This is the most important phase. Once something is public on GitHub, it is very difficult to truly remove it from the internet.
+
+- [ ] **Cursor has scanned the project for credentials and secrets.**
+  *API keys, passwords, tokens, private keys. Ask Cursor to scan before you create the repository.*
+
+- [ ] **There are no internal company references.**
+  *Internal domain names, internal URLs, Jira project codes, company-specific tool names. Replace with generic placeholders or remove entirely.*
+
+- [ ] **There are no hardcoded personal or machine-specific paths.**
+  *Paths like `/Users/yourname/` or `C:\Users\yourname\` only work on your machine. Make paths relative or configurable.*
+
+- [ ] **TODO/FIXME comments contain no internal context.**
+  *Remove or rewrite any comment that mentions a person's name, internal system, or company-specific workaround.*
+
+- [ ] **A `.gitignore` file exists and covers sensitive files.**
+  *`.gitignore` tells git which files to never commit — things like `.env` (where secrets live), local config files, and system files. Ask Cursor to generate one if it doesn't exist.*
+
+### Phase 3: Structure — does it have the right files?
+
+- [ ] **`README.md` exists and has a clear opener, installation instructions, and a usage example.**
+
+- [ ] **A `LICENSE` file exists.**
+  *Without a license, the project is technically "all rights reserved" even if it's public. For most tools: MIT. Ask Cursor: "What license should I use and why?"*
+
+- [ ] **`CONTRIBUTING.md` exists (even if short).**
+  *Even two sentences saying what contributions are welcome sets useful expectations.*
+
+- [ ] **`SECURITY.md` exists.**
+  *One paragraph saying how to report security issues privately. Prevents people from posting vulnerabilities as public issues.*
+
+### Phase 4: The "why" — can you explain it?
+
+- [ ] **The README opening answers "why does this exist?" not just "what does it do?"**
+  *"This is a tool that does X" tells someone what it does. "Every time I needed to X, I had to [painful process]" tells someone why they should care.*
+
+- [ ] **A new reader could understand the project in under two minutes.**
+  *Ask Cursor: "Read my README and tell me if anything is unclear for someone who has never seen this project before."*
+
+---
+
 ## License Checklist
 
 The license is the legal document that says who can use the project and how. Without one, the code is technically "all rights reserved" even if it's public on GitHub.

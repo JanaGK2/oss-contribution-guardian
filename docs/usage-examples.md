@@ -229,3 +229,68 @@ git push --force-with-lease origin your-branch-name
 The `--force-with-lease` part is a safety measure that prevents you from accidentally overwriting someone else's work. Replace `your-branch-name` with whatever branch you've been working on.
 
 If you get stuck at any point, paste the exact error message here and I'll help you through it step by step.
+
+---
+
+## Example 8: "Should I publish the scripts I built?"
+
+**User says:**
+> I built a bunch of Python scripts that automate my weekly reporting. I use them every day at work. My colleague asked if I could share them. Should I put them on GitHub?
+
+**Skill response:**
+
+This is a great question to think through carefully — not to discourage you, but because getting it right makes the difference between something that helps people and something that creates confusion or risk.
+
+Before we get to GitHub setup, let's work through three things:
+
+**First: Is it worth sharing?**
+You described it as automating your weekly reporting. A few questions to help me understand the value:
+- What does the report pull from? (A specific internal system, or general tools like Google Sheets or CSV files?)
+- Would someone outside your company be able to use these scripts, or are they tied to your company's specific setup?
+- What did you used to have to do manually that these scripts replaced?
+
+The reason I'm asking: if the scripts connect to internal systems or depend on your company's data structure, they may be hard for anyone else to use directly. That doesn't mean they're not worth sharing — but the README would need to explain clearly what someone would need to set up to use them.
+
+**Second, and more important: Are they safe to share?**
+Before publishing anything, I need to scan for things that must not go into a public repository:
+- If the scripts contain any API keys, passwords, database connection strings, or tokens — those need to come out before anything goes public.
+- If the scripts hardcode your company's internal URLs, database names, or system names — those identify your employer and might not be appropriate to share publicly.
+- If the scripts contain your company's data, customer information, or anything business-specific — that needs to be removed or replaced with example data.
+
+**Tell me:** point me at the scripts or paste their contents, and I'll do the scan. I'll tell you exactly what I find and what to do about it. This step is not optional — it protects you and your employer.
+
+**Third: Are you allowed to share them?**
+If you wrote these at work, on work equipment, or to solve a work problem, your employment agreement may assign the rights to your employer. This is more common than people realize. Before publishing, it's worth a quick check: does your company have a policy on personal GitHub projects? A short email to your manager or HR asking "is it OK if I open-source some internal tooling scripts?" is enough.
+
+Once we've gone through all three — and assuming everything is fine — then yes, GitHub makes total sense. And I can help you create the README, pick a license, and set the repository up.
+
+---
+
+## Example 9: "I want to publish a project but I don't know how to explain what it's for"
+
+**User says:**
+> I built a Cursor skill that helps me analyze sales data from CSV files. I think other people who use Cursor might find it useful. But when I try to write the README I just end up writing "this skill helps you analyze sales data" which feels obvious and useless.
+
+**Skill response:**
+
+That sentence isn't useless — it's just incomplete. It tells someone *what* the skill does. What it doesn't tell them is *why they should care*, which is the part that actually gets people to try something.
+
+Let me ask you a few questions, and from your answers I'll draft an opener that works:
+
+**Question 1:** Before you built this skill, how did you analyze your sales CSV data? What did you actually have to do, step by step?
+
+**Question 2:** What's the thing you hated most about that process? Or: what took the longest, or was the most error-prone?
+
+**Question 3:** What does this skill let you do that you couldn't do before — or couldn't do nearly as easily?
+
+Take your time with those. Even rough answers are fine.
+
+*(User answers: Before, I had to open the CSV in Excel, manually create pivot tables, copy results into a slide deck, and hope I hadn't made a formula error. It took about two hours every Friday. Now I describe what I want in plain English and get the summary in a few minutes.)*
+
+Good — here's a draft opener:
+
+> *Every Friday, analyzing my sales CSV meant two hours in Excel: pivot tables, manual summaries, formula errors, copy-pasting into slides. This Cursor skill replaces that with a plain-English conversation. Describe what you want to know about your data and it tells you — in minutes, not hours.*
+
+That opener answers "why does this exist" immediately. The rest of the README is just the details.
+
+Want me to continue drafting the full README from there?

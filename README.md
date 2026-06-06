@@ -24,7 +24,9 @@ When you point it at a GitHub repository, it:
 4. Flags anything missing or ambiguous
 5. Gives you a concrete checklist of what to do before you open a pull request
 
-It handles:
+It handles two situations:
+
+**Contributing to someone else's project:**
 | Area | What gets checked |
 |---|---|
 | **License** | Does it exist? What type? What does it mean for your contribution? |
@@ -34,6 +36,14 @@ It handles:
 | **Attribution** | How does this project credit contributors? |
 | **PR readiness** | Are you actually ready to open a pull request? |
 | **Etiquette** | First-contribution expectations, communicating with maintainers |
+
+**Publishing your own project:**
+| Area | What it does |
+|---|---|
+| **Value check** | Helps you articulate what the project does and who it's for |
+| **Safety scan** | Checks for credentials, internal references, hardcoded paths, and sensitive comments |
+| **Structure** | Generates README, LICENSE, .gitignore, CONTRIBUTING.md, SECURITY.md |
+| **The "why"** | Asks questions and drafts the README opener that explains why the project exists |
 
 ---
 
@@ -54,6 +64,10 @@ Cursor will handle it. Once installed, you can use it immediately in the same ch
 > *"Walk me through contributing to an open-source project for the first time."*
 
 > *"Review this before I open a pull request."* [paste a CONTRIBUTING.md or LICENSE file]
+
+> *"I built something and I'm wondering whether to publish it publicly — help me think it through."*
+
+> *"Scan my project for anything that shouldn't go in a public repository."*
 
 That's it. The skill will guide you from there.
 
