@@ -177,14 +177,93 @@ Once you have that sentence, the rest of the README is just the details.
 
 ---
 
-## Phase 6: Creating the repository and publishing
+## Phase 6: Creating the repository and pushing your files
 
-Once Phases 1–5 are done:
+Once Phases 1–5 are done, you need to get your files from your computer to GitHub. Here's how that works.
 
-1. **Create a new repository on GitHub.** The green "New" button on [github.com](https://github.com), or ask Cursor: *"Create a new public GitHub repository called [name] and push my project to it."*
-2. **Make sure it's set to Public** when you create it.
-3. **Add topic tags** on the repository page so people can find it. Topics are searchable labels — things like the language (e.g., `python`), the problem domain (e.g., `csv`, `automation`), or the tools it works with (e.g., `cursor`, `google-sheets`). On your repo page, click the gear icon next to "About" on the right side.
-4. **Write a short description** (the one-line summary GitHub shows in search results — the same sentence you wrote in Phase 5).
+### Step 1: Create the repository on GitHub
+
+A repository (often called a "repo") is a project's home on GitHub — a folder that stores all the files and their full history of changes.
+
+Create one at [github.com](https://github.com) (green "New" button, top left), or ask Cursor: *"Create a new public GitHub repository called [name] and push my project to it."*
+
+When creating it: set it to **Public**, and don't tick any of the "Initialize with..." options if your project already has files. You'll push those yourself.
+
+### Step 2: Does Cursor need to be connected to GitHub?
+
+No — there is no separate "connect Cursor to GitHub" step. Cursor uses git, which is the underlying tool that talks to GitHub. If you've successfully run `git push` before in this workspace (which you have — we've done it in this project), everything is already set up.
+
+What actually handles the connection is one of two things:
+- **GitHub CLI** (`gh`): A command-line tool that logs you into GitHub. If you installed it and ran `gh auth login` at some point, that's what's been authenticating you. You can check: in Cursor's terminal, type `gh auth status` and it will tell you who you're logged in as.
+- **SSH keys**: A cryptographic pair of files that GitHub uses to recognize your computer. More technical to set up, but doesn't require typing a password.
+
+If you've been successfully pushing to GitHub (as we have), you don't need to do anything.
+
+### Step 3: Push your files
+
+Pushing means sending your local changes from your computer to GitHub. The process is always three steps, in this order:
+
+**Step 3a — Stage your changes (`git add`)**
+"Staging" means telling git which changed files you want to include in your next save. Think of it as putting items in a box before sealing and sending it.
+
+```bash
+git add .
+```
+The `.` means "all changed files in this folder." You can also specify individual files instead.
+
+**Step 3b — Commit (`git commit`)**
+A commit is a saved snapshot of your project at a specific moment, with a short description of what changed and why. It's like pressing Save in a word processor, except it keeps every previous save and you can go back to any of them.
+
+```bash
+git commit -m "Add README and initial skill files"
+```
+The message after `-m` (short for "message") is yours to write. A good commit message describes *what changed* in plain language. "Update README" is fine. "Fix typo in Phase 3 checklist" is fine.
+
+**Step 3c — Push (`git push`)**
+Push sends your committed changes from your computer to GitHub.
+
+```bash
+git push origin main
+```
+`origin` is the name git uses to refer to the GitHub copy of your project (the remote). `main` is the name of the branch you're pushing to. A branch is a parallel version of the project — `main` is the default one where finished work lives.
+
+Or just:
+```bash
+git push
+```
+If your branch is already set up to track a remote branch (which it will be after the first push), git will know where to send it.
+
+### Step 4: Add topic tags and a description
+
+On your repository page on GitHub, click the gear icon next to "About" on the right side. Add:
+- A short description (the one-sentence summary from Phase 5)
+- Topic tags (searchable labels like the language, the problem domain, tools it works with — e.g., `python`, `cursor`, `google-sheets`, `automation`)
+
+These are how people discover your project without already knowing it exists.
+
+---
+
+## Day-to-day: pushing ongoing changes
+
+Once your project is published, you'll continue making changes over time. The same three-step process always applies: `git add`, `git commit`, `git push`.
+
+For skills and documentation projects like this one, the workflow looks like this in practice:
+
+1. You edit a file in Cursor
+2. When you're ready to save your work to GitHub, say: *"Commit and push my changes"*
+3. Cursor will stage the changes, ask you for (or suggest) a commit message, and push
+
+**Asking Cursor for a reminder:** You can also set Cursor to prompt you when a session ends if you have uncommitted local changes. Say: *"Remind me to commit and push before we finish this session."*
+
+### The "always ask before pushing" rule
+
+A global rule is installed that makes Cursor always show you a summary of what's about to be pushed and ask for your confirmation before running `git push`. This means:
+
+- You'll never accidentally push something you didn't mean to
+- You'll see a plain-English summary of what changes are going out
+- You can say no and review further if something looks off
+
+**If you want to remove this rule** (for example, because you find it interruptive), the rule file is at `~/.cursor/rules/git-push-confirmation.mdc`. You can delete it or open it in Cursor and say "disable this rule."
 
 ---
 
