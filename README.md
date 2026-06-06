@@ -144,17 +144,41 @@ This applies to this skill and any other skill you find online.
 
 ---
 
+## Practice here first
+
+If you're new to open source and want to make your first contribution somewhere low-stakes, this project is a good place to start.
+
+Why low-stakes? Because:
+- The maintainer (the author) is also learning. There's no senior gatekeeper waiting to judge your PR.
+- The project is documentation — there's no risk of breaking production software.
+- Every contribution that makes the skill clearer for beginners directly serves the project's purpose.
+- Mistakes are easy to fix. GitHub keeps the full history — nothing is permanent or catastrophic.
+
+**Things you could contribute right now:**
+
+- **Something that confused you** — if a term wasn't explained, or an explanation wasn't clear, that's a real gap. Open an issue and describe what you didn't understand.
+- **A topic that's missing** — did you run into a situation that wasn't covered? Describe it in an issue.
+- **A typo or unclear sentence** — fix it directly and open a pull request. A one-line fix is a valid first PR.
+- **A new usage example** — if you had a conversation with the skill that went well (or didn't), adding it to `examples/` helps the next person.
+- **A platform missing from the sharing guide** — if you know a community where this type of content belongs that isn't mentioned, add it.
+
+**You don't need to know how any of this works before you start.** The skill will guide you through the whole process. Once you've installed it, open a Cursor chat and say:
+
+> *"I want to make my first open-source contribution to https://github.com/JanaGK2/oss-contribution-guardian — walk me through it from the beginning."*
+
+Or just go straight to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what you ran into. That's it — that's a contribution.
+
+---
+
 ## How to improve this skill
 
-If the skill gave you confusing advice, missed something, or explained something badly — that's exactly the kind of feedback that makes it better.
+If you've used the skill and have more substantive feedback — something that was wrong, a whole area that's missing, a checklist that needs rewriting — the same process applies.
 
-**The easiest way to contribute is to use the skill itself.** Once you've installed it, open a Cursor chat and say:
+**The easiest path:** Open a Cursor chat and say:
 
 > *"I want to contribute an improvement to https://github.com/JanaGK2/oss-contribution-guardian — walk me through it."*
 
-The skill will guide you through the whole process: figuring out what to suggest, whether to open an issue or a pull request, what to write, and how to do it step by step. You don't need to know how GitHub contributions work in advance — that's the point of the skill.
-
-If you'd rather start with something simpler: go to [github.com/JanaGK2/oss-contribution-guardian/issues](https://github.com/JanaGK2/oss-contribution-guardian/issues) and click **New Issue**. Describe what was confusing or wrong. That's a valid contribution — you don't have to fix it yourself.
+The skill will guide you: what to suggest, whether to open an issue or a pull request, what to write, and each step of the process. You don't need to know how GitHub contributions work first.
 
 ---
 

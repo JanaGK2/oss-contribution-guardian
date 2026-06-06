@@ -6,6 +6,92 @@ Each prompt includes a plain-English description of when to use it and what you'
 
 ---
 
+## Start here: contributing to this skill as your first contribution
+
+These prompts are specifically for contributing to the OSS Contribution Guardian skill itself. This is a good place to practice — the project is documentation, the maintainer is also learning, and there's no risk of breaking anything serious.
+
+### "Walk me through my first contribution to this skill"
+
+**When to use:** You want to make your very first open-source contribution and want to be guided through the whole process from scratch. Nothing assumed.
+
+```
+I want to make my first open-source contribution ever. I'd like to start with this project: https://github.com/JanaGK2/oss-contribution-guardian
+
+I have never opened a pull request, filed a GitHub issue, or contributed to any open-source project before.
+
+Please:
+1. Check what this project expects from contributors
+2. Help me figure out what I could contribute — ask me what I found confusing, unclear, or missing when reading the skill or its documentation
+3. Walk me through the contribution step by step, explaining every term as we go
+4. Don't skip steps or assume I know how GitHub works
+
+I want to understand what I'm doing, not just copy-paste commands.
+```
+
+---
+
+### "I found something confusing — help me report it"
+
+**When to use:** Something in the skill's explanations, checklists, or prompts wasn't clear to you. You want to report it so it can be improved, but you're not sure how to file a GitHub issue.
+
+A **GitHub issue** is like a message you send to a project — it goes into a public inbox where the maintainer (and anyone else watching the project) can read it and respond.
+
+```
+I used the OSS Contribution Guardian skill and something wasn't clear to me.
+
+Here's what confused me: [describe what you read and what you didn't understand]
+
+I'd like to report this so it can be improved. Please:
+1. Help me write a clear GitHub issue that explains what was confusing and why
+2. Tell me exactly where to post it (the URL to open a new issue)
+3. Explain what happens after I post — will someone respond? How long does it take?
+
+I've never filed a GitHub issue before.
+```
+
+---
+
+### "I want to suggest a topic that isn't covered"
+
+**When to use:** You started thinking about making an open-source contribution and ran into a question that the skill didn't answer. You want to suggest it be added.
+
+```
+I was using the OSS Contribution Guardian skill and ran into a situation it didn't cover.
+
+The situation: [describe what happened or what question you had]
+
+I'd like to suggest this be added to the skill. Please:
+1. Help me write a GitHub issue proposing this addition — explain the situation clearly and why it would help other new contributors
+2. Tell me whether this is better as a GitHub issue (reporting the gap) or a pull request (writing the content myself)
+3. If I should write it myself, help me draft what the new content would say
+
+The project is at: https://github.com/JanaGK2/oss-contribution-guardian
+```
+
+---
+
+### "I want to fix a typo or small error and open my first pull request"
+
+**When to use:** You spotted a typo, a broken link, or a small mistake in the documentation and want to fix it yourself. This is one of the best ways to make a first contribution — small, clear, and genuinely useful.
+
+A **pull request** (PR) is how you propose a change to someone else's project. You make the change in your own copy, then ask the maintainer to include it. It sounds technical, but Cursor can do most of the steps for you.
+
+```
+I found a [typo / broken link / small mistake] in the OSS Contribution Guardian project and I want to fix it myself and open my first pull request.
+
+Here's what I found: [describe the issue and where it is]
+
+Please walk me through:
+1. How to make the fix
+2. How to propose it as a pull request to https://github.com/JanaGK2/oss-contribution-guardian
+3. What to write in the pull request description
+4. What happens after I open it
+
+Explain each step — I have not done this before. Tell me what every command or button does before I use it.
+```
+
+---
+
 ## "I'm new to this — just walk me through it"
 
 **When to use:** You've never contributed to open source before, or you're contributing to this particular project for the first time and want to understand what you're walking into before doing anything.
