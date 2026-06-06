@@ -1,0 +1,117 @@
+# MANIFEST.yaml - OSS Contribution Guardian
+# Last updated: 2026-06-06
+
+project:
+  name: oss-contribution-guardian
+  description: Cursor AI skill for new open-source contributors — covers contributing to others' projects and publishing your own
+  owner: jana.chvalkovska@gmail.com
+  github: https://github.com/JanaGK2/oss-contribution-guardian
+  created: 2026-06-05
+  status: active
+
+# ============================================================
+# COMPONENTS
+# ============================================================
+components:
+  skill:
+    - id: main-skill
+      name: OSS Contribution Guardian Skill
+      path: skill/SKILL.md
+      installed_at: ~/.cursor/skills/oss-contribution-guardian/SKILL.md
+      description: The Cursor AI skill file — this is what users install
+      status: active
+
+  reference_files:
+    - id: checklists
+      path: skill/checklists.md
+      description: Contribution checklists for both scenarios (publishing own project + contributing to others)
+    - id: prompts
+      path: skill/prompts.md
+      description: Ready-to-use prompt templates; opens with self-contribution prompts
+    - id: decision-tree
+      path: skill/decision-tree.md
+      description: Quick decision guidance
+    - id: rules
+      path: skill/rules.md
+      description: Firm boundaries the skill must follow
+
+  guides:
+    - id: publishing-guide
+      path: docs/publishing-your-own-work.md
+      description: 8-phase guide for publishing your own project (value → intended user → safety → structure → why → pushing → sharing → maintainer duties)
+    - id: usage-examples
+      path: docs/usage-examples.md
+      description: 9 realistic conversation examples showing how the skill responds
+
+  examples:
+    - id: example-requests
+      path: examples/example-user-requests.md
+      description: 18 realistic user requests with skill responses; first 4 are for contributing to this skill
+    - id: example-reviews
+      path: examples/example-repo-reviews.md
+      description: 5 worked repo review examples
+
+# ============================================================
+# DEPENDENCIES
+# ============================================================
+dependencies:
+  required:
+    - name: Cursor IDE
+      purpose: The skill only runs inside Cursor
+      version: any current version
+    - name: GitHub account
+      purpose: Required for actual contribution steps
+  optional:
+    - name: git (local)
+      purpose: Required for local contribution workflows; browser-only path needs none
+
+  no_api_keys: true
+  no_credentials: true
+  no_external_services: true
+
+# ============================================================
+# DEPLOYMENTS
+# ============================================================
+deployments:
+  - name: GitHub Public Repository
+    type: github_repo
+    url: https://github.com/JanaGK2/oss-contribution-guardian
+    environment: public
+    last_deployed: 2026-06-06
+    deploy_steps: |
+      git add -A
+      git commit -m "message"
+      git push origin main
+      (No build step — plain text files)
+
+  - name: Global Cursor Skill
+    type: cursor_skill
+    installed_path: ~/.cursor/skills/oss-contribution-guardian/SKILL.md
+    last_updated: 2026-06-06
+    deploy_steps: |
+      cp skill/SKILL.md ~/.cursor/skills/oss-contribution-guardian/SKILL.md
+
+# ============================================================
+# STAKEHOLDERS
+# ============================================================
+stakeholders:
+  owner: jana.chvalkovska@gmail.com
+  intended_users: New open-source contributors who find existing documentation confusing
+  also_welcome: Experienced OSS contributors who want to improve the skill
+
+# ============================================================
+# RELATED PROJECTS
+# ============================================================
+related:
+  - name: public-skills
+    path: ~/myagents/public-skills
+    relationship: Other public Cursor skills by the same author
+  - name: OSS_TOOLS.md
+    path: ~/myagents/OSS_TOOLS.md
+    relationship: Registry of external OSS tools used; this project is listed there
+
+# ============================================================
+# SECRETS REGISTRY
+# ============================================================
+secrets: []
+# No secrets, credentials, or API keys in this project.
